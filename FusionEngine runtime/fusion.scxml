@@ -179,7 +179,7 @@
     <onentry>
       <log label="[ssecondmod[hold][empty][empty][empty][empty][empty][empty][empty]-speech[team][empty][empty][empty][empty][empty][empty][empty]]" expr="READY" />
       <assign name="data2" expr="${_eventdata.data}" />
-      <commons:var name="newExtensionNotification" expr="${mmi:newExtensionNotificationF(contextId, 'FUSION', 'IM', mmi:newRequestId(contextId), null, data1,data2, '[HOLD_COMP][EMP][EMP][EMP][EMP][EMP][EMP][EMP]')}" />
+      <commons:var name="newExtensionNotification" expr="${mmi:newExtensionNotificationF(contextId, 'FUSION', 'IM', mmi:newRequestId(contextId), null, data1,data2, '[TEAM][HOLD][EMP][EMP][EMP][EMP][EMP][EMP]')}" />
       <send event="HOLD_COMP" target="IM" targettype="MC" namelist="newExtensionNotification" />
     </onentry>
     <transition target="main" />
@@ -218,7 +218,7 @@
     <onentry>
       <log label="[ssecondmod[hey][empty][empty][empty][empty][empty][empty][empty]-speech[team][empty][empty][empty][empty][empty][empty][empty]]" expr="READY" />
       <assign name="data2" expr="${_eventdata.data}" />
-      <commons:var name="newExtensionNotification" expr="${mmi:newExtensionNotificationF(contextId, 'FUSION', 'IM', mmi:newRequestId(contextId), null, data1,data2, '[HEY_COMP][EMP][EMP][EMP][EMP][EMP][EMP][EMP]')}" />
+      <commons:var name="newExtensionNotification" expr="${mmi:newExtensionNotificationF(contextId, 'FUSION', 'IM', mmi:newRequestId(contextId), null, data1,data2, '[TEAM][HEY][EMP][EMP][EMP][EMP][EMP][EMP]')}" />
       <send event="HEY_COMP" target="IM" targettype="MC" namelist="newExtensionNotification" />
     </onentry>
     <transition target="main" />
@@ -373,7 +373,7 @@
     <onentry>
       <log label="[sspeech[team][empty][empty][empty][empty][empty][empty][empty]-secondmod[hold][empty][empty][empty][empty][empty][empty][empty]]" expr="READY" />
       <assign name="data2" expr="${_eventdata.data}" />
-      <commons:var name="newExtensionNotification" expr="${mmi:newExtensionNotificationF(contextId, 'FUSION', 'IM', mmi:newRequestId(contextId), null, data1,data2, '[HOLD_COMP][EMP][EMP][EMP][EMP][EMP][EMP][EMP]')}" />
+      <commons:var name="newExtensionNotification" expr="${mmi:newExtensionNotificationF(contextId, 'FUSION', 'IM', mmi:newRequestId(contextId), null, data1,data2, '[TEAM][HOLD][EMP][EMP][EMP][EMP][EMP][EMP]')}" />
       <send event="HOLD_COMP" target="IM" targettype="MC" namelist="newExtensionNotification" />
     </onentry>
     <transition target="main" />
@@ -382,7 +382,7 @@
     <onentry>
       <log label="[sspeech[team][empty][empty][empty][empty][empty][empty][empty]-secondmod[hey][empty][empty][empty][empty][empty][empty][empty]]" expr="READY" />
       <assign name="data2" expr="${_eventdata.data}" />
-      <commons:var name="newExtensionNotification" expr="${mmi:newExtensionNotificationF(contextId, 'FUSION', 'IM', mmi:newRequestId(contextId), null, data1,data2, '[HEY_COMP][EMP][EMP][EMP][EMP][EMP][EMP][EMP]')}" />
+      <commons:var name="newExtensionNotification" expr="${mmi:newExtensionNotificationF(contextId, 'FUSION', 'IM', mmi:newRequestId(contextId), null, data1,data2, '[TEAM][HEY][EMP][EMP][EMP][EMP][EMP][EMP]')}" />
       <send event="HEY_COMP" target="IM" targettype="MC" namelist="newExtensionNotification" />
     </onentry>
     <transition target="main" />

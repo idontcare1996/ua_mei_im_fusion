@@ -176,6 +176,7 @@ namespace AppGui
 
                 switch (command)
                 {
+                // SPEECH
                     // QUANTOS/QUANTAS
                     case "HOWMANY":
                         switch(command2)
@@ -654,6 +655,90 @@ namespace AppGui
                         {
                             t.Speak(" Abrindo o Counter Strike ");
                             Process.Start(@"C:\Program Files (x86)\Steam\Steam.exe", "-applaunch 730 -console +exec autoexec +exec autoexec");
+                            break;
+                        }
+                // GESTURES
+                    // AGACHAR
+                    case "CROUCH":
+                        {
+                            // CÓDIGO PARA DAR INPUT DA TECLA: VK_K ( Tecla K do teclado )
+                            inputsim.Keyboard.KeyDown(VirtualKeyCode.LCONTROL);
+                            Thread.Sleep(1000);
+
+                            break;
+                        }
+                    // DAB DAB DAB DAB DAB DAB DAB DAB DAB DAB DAB DAB DAB DAB DAB DAB DAB DAB DAB
+                    case "DAB":
+                        {
+                            // CÓDIGO PARA DAR INPUT DA TECLA: VK_K ( Tecla K do teclado )
+                            inputsim.Keyboard.KeyPress(VirtualKeyCode.VK_Y);
+                            Thread.Sleep(100);
+                            inputsim.Keyboard.KeyPress(VirtualKeyCode.VK_D);
+                            Thread.Sleep(50);
+                            inputsim.Keyboard.KeyPress(VirtualKeyCode.VK_A);
+                            Thread.Sleep(50);
+                            inputsim.Keyboard.KeyPress(VirtualKeyCode.VK_B);
+                            Thread.Sleep(50);
+                            inputsim.Keyboard.KeyPress(VirtualKeyCode.RETURN);
+                            Thread.Sleep(50);
+                            break;
+                        }
+                    // CHEERS
+                    case "HEY":
+                        {
+                            // CÓDIGO PARA DAR INPUT DA TECLA: VK_K ( Tecla K do teclado )
+                            inputsim.Keyboard.KeyPress(VirtualKeyCode.VK_X);
+                            Thread.Sleep(25);
+                            inputsim.Keyboard.KeyPress(VirtualKeyCode.VK_3);
+                            break;
+                        }                    
+                    // AGUENTA ESTE SÍTIO
+                    case "HOLD":
+                        {
+                            // CÓDIGO PARA DAR INPUT DA TECLA: VK_K ( Tecla K do teclado )
+                            inputsim.Keyboard.KeyPress(VirtualKeyCode.VK_Z);
+                            Thread.Sleep(25);
+                            inputsim.Keyboard.KeyPress(VirtualKeyCode.VK_4);
+                            break;
+                        }
+                    // EQUIPA!
+                    case "TEAM":
+                        {
+                            switch(command2)
+                            {
+                                //AGUENTEM ESTE SÍTIO
+                                case "HOLD":
+                                    {
+                                        // CÓDIGO PARA DAR INPUT DA TECLA: VK_K ( Tecla K do teclado )
+                                        inputsim.Keyboard.KeyPress(VirtualKeyCode.VK_X);
+                                        Thread.Sleep(25);
+                                        inputsim.Keyboard.KeyPress(VirtualKeyCode.VK_3);
+                                        break;
+
+                                    }
+                                // EXCELENTE!
+                                case "HEY":
+                                    {
+                                        // CÓDIGO PARA DAR INPUT DA TECLA: VK_K ( Tecla K do teclado )
+                                        inputsim.Keyboard.KeyPress(VirtualKeyCode.VK_Z);
+                                        Thread.Sleep(25);
+                                        inputsim.Keyboard.KeyPress(VirtualKeyCode.VK_4);
+                                        break;
+
+                                    }
+                            }
+                            break;
+                        }
+                    // RECARREGA
+                    case "RELOAD":
+                        {
+                            // CÓDIGO PARA DAR INPUT DA TECLA: VK_K ( Tecla K do teclado )
+                            inputsim.Keyboard.KeyPress(VirtualKeyCode.VK_R);
+                            break;
+                        }
+                    default:
+                        {
+
                             break;
                         }
                 }
