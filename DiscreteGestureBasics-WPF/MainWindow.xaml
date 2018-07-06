@@ -1,0 +1,69 @@
+﻿<Window x:Class="Microsoft.Samples.Kinect.DiscreteGestureBasics.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Microsoft.Samples.Kinect.DiscreteGestureBasics"
+        Title="Discrete Gesture Basics"
+        Height="650" Width="750"
+        Closing="MainWindow_Closing"
+        Background="DarkGray">
+    
+    <Window.Resources>
+        <SolidColorBrush x:Key="MediumGreyBrush" Color="#ff6e6e6e" />
+        <SolidColorBrush x:Key="KinectPurpleBrush" Color="#ff52318f" />
+        <SolidColorBrush x:Key="KinectBlueBrush" Color="#ff00BCF2" />
+
+        <DataTemplate DataType="{x:Type local:GestureResultView}">
+
+        </DataTemplate>
+
+    </Window.Resources>
+
+
+
+    <Grid x:Name="contentGrid" Margin="0,0,0,0" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+
+        <Image x:Name="normal" Source="Images/normal.png" Width="210"  Height="210" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" OpacityMask="#FFE01E1E"/>
+        <Image x:Name="overlay_normal" Source="Images/overlay_green.png" Width="210"  Height="210" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Opacity="0.5" VerticalAlignment="Center"/>
+        <Label Content="Normal" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin =" 0 16 0 0" FontSize="20" Background="#7FFFFFFF"/>
+        
+        <Image x:Name="crouch_image" Source="Images/crouch_image.png"  Width="210"  Height="210" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="Crouch" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin =" 0 16 0 0" FontSize="20" Background="#7FFFFFFF"/>
+        <Image x:Name="overlay_crouch" Opacity="0.0" Source="Images/overlay_green.png" Width="210"  Height="210" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        
+        <Image x:Name="dab_image" Source="Images/dab_image.png"  Width="210"  Height="210" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="Dab" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin =" 0 16 0 0" FontSize="20" Background="#7FFFFFFF"/>
+        <Image x:Name="overlay_dab" Opacity="0.0"  Source="Images/overlay_green.png" Width="210"  Height="210" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        
+        <Image x:Name="hey_image" Source="Images/hey_image.png"  Width="210"  Height="210" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="Hey" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin =" 0 16 0 0" FontSize="20" Background="#7FFFFFFF"/>
+        <Image x:Name="overlay_hey" Opacity="0.0"  Source="Images/overlay_green.png" Width="210"  Height="210" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Image x:Name="hold_image" Source="Images/hold_image.png" Width="210"  Height="210" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="Hold" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin =" 0 16 0 0" FontSize="20" Background="#7FFFFFFF"/>
+        <Image x:Name="overlay_hold"  Opacity="0.0" Source="Images/overlay_green.png" Width="210"  Height="210" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Image x:Name="reload_image" Source="Images/reload_image.png" Width="210"  Height="210" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="Reload" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin =" 0 16 0 0" FontSize="20" Background="#7FFFFFFF"/>
+        <Image x:Name="overlay_reload" Opacity="0.0"  Source="Images/overlay_green.png" Width="210"  Height="210" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <TextBlock x:Name="current_gesture" Text="Current Gesture" FontFamily="Segoe UI" FontSize="24" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Text="Gestures" FontFamily="Segoe UI" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Viewbox Grid.Row="0" Grid.Column="1" x:Name="kinectBodyViewbox">
+            <Image Source="{Binding ImageSource}" />
+        </Viewbox>
+        
+
+    </Grid>
+</Window>

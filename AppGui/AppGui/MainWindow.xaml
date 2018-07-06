@@ -1,0 +1,23 @@
+﻿<Window x:Class="AppGui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppGui"
+        mc:Ignorable="d"
+        Title="Global Offensive Control App" Height="292" Width="472">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="232*"/>
+            <ColumnDefinition Width="232*"/>
+        </Grid.ColumnDefinitions>
+        <Image HorizontalAlignment ="Center" VerticalAlignment="Top" Source="maxresdefault.png" Margin="0,1,0,-8" Width="463" Height="268" Opacity="0.5" ClipToBounds="True" Grid.ColumnSpan="2"/>
+        <Rectangle Fill="#ffffff" HorizontalAlignment="Left" Height="71" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="443" Opacity="0.3" Grid.ColumnSpan="2"/>
+
+        <TextBox x:Name="textbox_output_mmi" HorizontalAlignment="Left" Height="23" Margin="19,47,0,0" TextWrapping="Wrap" Text=" MMI output " VerticalAlignment="Top" Width="426" Grid.ColumnSpan="2"/>
+        <Label Content="MMI OUTPUT:" HorizontalAlignment="Left" Height="24" Margin="19,18,0,0" VerticalAlignment="Top" Width="98" RenderTransformOrigin="0.542,0.535"/>
+        
+
+
+    </Grid>
+</Window>

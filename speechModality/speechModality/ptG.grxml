@@ -1,0 +1,187 @@
+﻿<?xml version="1.0"?>
+<grammar xml:lang="pt-PT" version="1.0" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="rootRule" scope="public">
+    <item>
+      <item>
+        <ruleref uri="#command"/>
+        <tag>out.command = rules.latest();</tag>
+      </item>
+      <item>
+        <ruleref uri="#command2"/>
+        <tag>out.command2 = rules.latest();</tag>
+      </item>
+      <item>
+        <ruleref uri="#details"/>
+        <tag>out.details = rules.latest();</tag>
+      </item>
+      <item>
+        <ruleref uri="#weapons"/>
+        <tag>out.weapons = rules.latest();</tag>
+      </item>
+    </item>
+  </rule>
+  <rule id="command">
+    <one-of>
+      <item>
+        Quantos<tag>out = "HOWMANY"</tag>
+      </item>
+      <item>
+        Abre o Counter-Strike por favor<tag>out = "OPEN_CSGO"</tag>
+      </item>
+      <item>
+        Abre o Counter-Strike<tag>out = "OPEN_CSGO"</tag>
+      </item>
+      <item>
+        Quanto<tag>out = "HOWMUCH"</tag>
+      </item>
+      <item>
+        Quanta<tag>out = "HOWMUCH"</tag>
+      </item>
+      <item>
+        Quantas<tag>out = "HOWMANY"</tag>
+      </item>
+      <item>
+        Diz-me quantos<tag>out = "HOWMANY"</tag>
+      </item> 
+      <item>
+        Diz-me quantas<tag>out = "HOWMANY"</tag>
+      </item>
+      <item>
+        Em que ronda estou?<tag>out = "ROUND_INFO"</tag>
+      </item>
+      <item>
+        Tenho dinheiro para<tag>out = "CAN_AFFORD"</tag>
+      </item>
+      <item>
+        Tenho <tag>out = "HAVE"</tag>
+      </item>
+      <item>
+        Compra-me uma <tag>out = "BUY_ME"</tag>
+      </item>
+      <item>
+        Compra-me um <tag>out = "BUY_ME"</tag>
+      </item>
+      <item>
+        Podes comprar-me uma <tag>out = "BUY_ME"</tag>
+      </item>
+      <item>
+        Podes comprar-me um <tag>out = "BUY_ME"</tag>
+      </item>      
+    </one-of>
+  </rule>     
+  <rule id="command2">
+    <one-of>
+      <item>
+        <tag>out = "EMPTY"</tag>
+      </item>  
+      <item>
+        balas<tag>out = "BULLETS"</tag>
+      </item>
+      <item>
+        dinheiro <tag>out = "MONEY"</tag>
+      </item>
+      <item>
+        bónus <tag>out = "BONUS"</tag>
+      </item>    
+      <item>
+        rondas <tag>out = "ROUNDS"</tag>
+      </item>
+      <item>
+        vida <tag>out = "HEALTH"</tag>
+      </item>
+      <item>
+        armadura <tag>out = "ARMOUR"</tag>
+      </item>   
+      <item>
+        mortes <tag>out = "KILLS"</tag>
+      </item>  
+      <item>
+        óbitos <tag>out = "DEATHS"</tag>
+      </item>  
+      <item>
+        espetadores <tag>out = "SPECTATORES"</tag>
+      </item>  
+    </one-of>
+  </rule>
+  <rule id="details">
+    <one-of>
+      <item>
+        <tag>out = "EMPTY"</tag>
+      </item> 
+      <item>
+        faltam? <tag>out = "LEFT"</tag>
+      </item>
+      <item>
+        faltam para o intervalo? <tag>out = "LEFT_HALF"</tag>
+      </item>      
+      <item>
+        custa uma<tag>out = "COST"</tag>
+      </item>
+      <item>
+        custa um<tag>out = "COST"</tag>
+      </item>  
+      <item>
+        tenho <tag>out = "HAVE"</tag>
+      </item>  
+       <item>
+        tenho nesta ronda <tag>out = "HAVE_ROUND"</tag>
+      </item>  
+      <item>
+        falta <tag>out = "LEFT"</tag>
+      </item>
+      <item>
+        para comprar um <tag>out = "ENOUGH_FOR"</tag>
+      </item>
+      <item>
+        para comprar uma <tag>out = "ENOUGH_FOR"</tag>
+      </item> 
+      <item>
+        suficiente para comprar um <tag>out = "ENOUGH_FOR"</tag>
+      </item> 
+      <item>
+        suficiente para comprar uma <tag>out = "ENOUGH_FOR"</tag>
+      </item>
+      <item>
+        próxima ronda <tag>out = "NEXT_ROUND"</tag>
+      </item>
+      <item>
+        nesta ronda <tag>out = "THIS_ROUND"</tag>
+      </item>    
+    </one-of>
+  </rule>
+  <rule id="weapons">
+    <one-of>  
+      <item>
+        <tag>out = "EMPTY"</tag>
+      </item>
+       <item>
+        A K 47 <tag>out = "AK47"</tag>
+      </item>
+      <item>
+        Deagle <tag>out = "DEAGLE"</tag>
+      </item>
+      <item>
+        Desert Eagle<tag>out = "DEAGLE"</tag>
+      </item>
+       <item>
+        Defuse<tag>out = "DEFUSE"</tag>
+      </item>
+      <item>
+        A W P <tag>out = "AWP"</tag>
+      </item> 
+      <item>
+        Colete e capacete <tag>out = "KELVAR_CAP"</tag>
+      </item>  
+      <item>
+        P250 <tag>out = "P250"</tag>
+      </item>    
+        <item>
+        M P 7 <tag>out = "MP7"</tag>
+      </item>  
+       <item>
+        U M P 45 <tag>out = "UMP45"</tag>
+      </item>           
+    </one-of>
+  </rule> 
+       
+</grammar>
