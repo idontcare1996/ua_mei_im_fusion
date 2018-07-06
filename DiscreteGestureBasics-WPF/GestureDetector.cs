@@ -38,8 +38,8 @@
 
             //init LifeCycleEvents..
             lce = new LifeCycleEvents("GESTURES", "FUSION", "gestures-1", "acoustic", "command"); // LifeCycleEvents(string source, string target, string id, string medium, string mode)
-            //mmic = new MmiCommunication("localhost",9876,"User1", "ASR");  //PORT TO FUSION - uncomment this line to work with fusion later
-            mmic = new MmiCommunication("localhost", 8000, "User1", "GESTURES"); // MmiCommunication(string IMhost, int portIM, string UserOD, string thisModalityName)
+            mmic = new MmiCommunication("localhost",9876,"User1", "ASR");  //PORT TO FUSION - uncomment this line to work with fusion later
+            //mmic = new MmiCommunication("localhost", 8000, "User1", "GESTURES"); // MmiCommunication(string IMhost, int portIM, string UserOD, string thisModalityName)
             mmic.Send(lce.NewContextRequest());
 
 
@@ -341,7 +341,7 @@
         private void sre_GestureRecognized(double confidence, string gesture)
         {
             string json = "{ \"recognized\": [";
-            json += "\"" + confidence + "\", ";
+            //json += "\"" + confidence + "\", ";
             json += "\"" + gesture + "\", ";
             // Just using the first two comands. The rest is EMP
             for (int i = 0; i < 8; i++)

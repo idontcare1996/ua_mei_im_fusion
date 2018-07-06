@@ -65,8 +65,45 @@
         Podes comprar-me uma <tag>out = "BUY_ME"</tag>
       </item>
       <item>
-        Podes comprar-me um <tag>out = "BUY_ME"</tag>
-      </item>      
+        Aguenta-te aqui <tag>out = "HOLD"</tag>
+      </item> 
+      <item>
+        Fica aqui <tag>out = "HOLD"</tag>
+      </item>
+      <item>
+        Mantém esta posição <tag>out = "HOLD"</tag>
+      </item>
+      <item>
+        Podes ficar aqui? <tag>out = "HOLD"</tag>
+      </item>
+      <item>
+        Fica <tag>out = "HOLD"</tag>
+      </item>
+      <item>
+        Yeah! <tag>out = "HEY"</tag>
+      </item>
+      <item>
+        Sim! <tag>out = "HEY"</tag>
+      </item>
+      <item>
+        Muito bom! <tag>out = "HEY"</tag>
+      </item>  
+      <item>
+        Excelente <tag>out = "HEY"</tag>
+      </item>  
+      <item>
+        Tá lá <tag>out = "HEY"</tag>
+      </item>
+      <item>
+        Equipa <tag>out = "TEAM"</tag>
+      </item>
+      <item>
+        Tá lá <tag>out = "TEAM"</tag>
+      </item>
+      <item>
+        Tá lá <tag>out = "TEAM"</tag>
+      </item>
+
     </one-of>
   </rule>     
   <rule id="command2">
